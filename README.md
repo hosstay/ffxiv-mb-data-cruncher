@@ -1,6 +1,6 @@
-# Full Stack Login Example
+# FFXI Market Board Data Cruncher
 
-An implementation of a website with login using Aurelia, Node, Express, & Postgresql as well as various other libraries to get everything working together (check the package.json files in the client and server folders for the full list).
+For collecting historical information and crunching data for my ffxiv market board excel spreadsheet.
 
 ## Getting Started
 
@@ -11,6 +11,8 @@ Have Node installed
 I've included the node modules in the repo for simplicities sake. 
 
 ### Database
+
+IGNORE THIS SECTION FOR NOW
 
 Table 'users'
 
