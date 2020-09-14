@@ -9,7 +9,7 @@ async function addData(req, res) {
     let query = '';
 
     data.forEach((datum) => {
-      query += `INSERT INTO ffxi_mb_data_dump (item_name, type, initial_cost, gross, date) VALUES ('${datum.itemName.replace(/\'/, '\'\'')}', '${datum.type}', ${datum.initialCost.replace(/\,/, '')}, ${datum.gross.replace(/\,/, '')}, '${date}');\n`;
+      query += `INSERT INTO ffxiv_mb_data_dump (item_name, type, initial_cost, gross, date) VALUES ('${datum.itemName.replace(/\'/, '\'\'')}', '${datum.type}', ${datum.initialCost.replace(/\,/, '')}, ${datum.gross.replace(/\,/, '')}, '${date}');\n`;
     });
 
     await db.query(query);
@@ -23,7 +23,7 @@ async function addData(req, res) {
 
 async function getAllData(req, res) {
   try {
-    const data = await db.query('SELECT * FROM ffxi_mb_data_dump ORDER BY item_name, date;');
+    const data = await db.query('SELECT * FROM ffxiv_mb_data_dump ORDER BY item_name, date;');
 
     return res.status(200).json(security.encrypt({success: true, result: {success: true, data: data[0]}}));
   } catch (err) {

@@ -12,7 +12,7 @@ I've included the node modules in the repo for simplicities sake.
 
 ### Database
 
-Table 'ffxi_mb_data_dump'
+Table 'ffxiv_mb_data_dump'
 
 column_name             column_default                data_type              character_maximum_length
 
