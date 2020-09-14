@@ -1,4 +1,4 @@
-# FFXI Market Board Data Cruncher
+# FFXIV Market Board Data Cruncher
 
 For collecting historical information and crunching data for my ffxiv market board excel spreadsheet.
 
@@ -12,17 +12,21 @@ I've included the node modules in the repo for simplicities sake.
 
 ### Database
 
-IGNORE THIS SECTION FOR NOW
-
-Table 'users'
+Table 'ffxi_mb_data_dump'
 
 column_name             column_default                data_type              character_maximum_length
 
-'id'          'nextval('users_id_seq'::regclass)'	    'integer'	                     null
+'id'          'nextval('users_id_seq'::regclass)'	   'integer'	                   null
 
-'username'                   null                 'character varying'	                40
+'item_name'                   null                 'character varying'	               200
 
-'password'	                 null                 'character varying'	               200
+'type'	                      null                 'character varying'	               200
+
+'initial_cost'	              null                 'character varying'	               200
+
+'gross'	                      null                 'character varying'	               200
+
+'date'	                      null             'timestamp without timezone'	           null
 
 ### Installing
 
